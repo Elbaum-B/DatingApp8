@@ -1,0 +1,53 @@
+/*
+	dotnet --info //Installed SDKs Information 
+	dotnet new list <template-name>
+*/
+
+
+
+mkdir <folder-name>
+cd <folder-name>
+dotnet new sln
+dotnet new webapi -n API --user-controllers
+dotnet sln add API
+dotnet tool list -g --available global key
+
+/*
+	Ctrl+ Shift + P // show all command
+	Ctrl+P //Go To File
+	Manage>Setting >> Open Settings(UI)  // changes made inside VS Code	
+	Ctrl + .   //quick fix
+*/
+
+
+dotnet dev-certs https --clean
+dotnet dev-certs https --trust
+dotnet tool install --global dotnet-ef --version 8.0.7
+//dotnet ef migrations -h
+dotnet ef migrations add InitialCreate -o Data/Migrations
+
+dotnet run
+dotnet watch
+
+code .
+
+dotnet packages:
+C# Dev Kit
+Material Icon Theme
+NuGet Gallery
+SQLite
+C#
+C# Extensions (C# IDE Extentions for VSCode)
+
+nuget:
+Microsoft.EntityFrameworkCore.Sqlite
+Microsoft.EntityFrameworkCore.Design
+
+
+git init  
+dotnet new gitignore
+
+
+
+angular packages:
+Angular Language Service
