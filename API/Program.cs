@@ -11,6 +11,7 @@ builder.Services.AddDbContext<DataContext>(opt =>
 );
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddCors();
 
 var app = builder.Build();
 
@@ -24,7 +25,8 @@ if (app.Environment.IsDevelopment())
 // app.UseHttpsRedirection();
 
 // app.UseAuthorization();
-
+app.UseCors(x => x.AllowAnyHeader().AllowAnyMethod()
+    .WithOrigins("http://localhost:4200", "http://localhost:4201","https://localhost:4200", "https://localhost:4201"));
 app.MapControllers();
 
 app.Run();

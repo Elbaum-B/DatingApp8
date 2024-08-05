@@ -25,6 +25,7 @@ dotnet dev-certs https --trust
 dotnet tool install --global dotnet-ef --version 8.0.7
 //dotnet ef migrations -h
 dotnet ef migrations add InitialCreate -o Data/Migrations
+dotnet ef database update
 
 dotnet run
 dotnet watch
@@ -43,11 +44,17 @@ nuget:
 Microsoft.EntityFrameworkCore.Sqlite
 Microsoft.EntityFrameworkCore.Design
 
-
+/////////////////////////////////////////////// Git  ////////////////////////////////////
 git init  
 dotnet new gitignore
+git remote add origin https://github.com/Elbaum-B/DatingApp8.git
 
-
-
+////////////////////////////////////////////  Angular  //////////////////////////////////////
+/* 
+	node --version
+	npm cache clean --force
+	npm install -g n
+	npm install @angular/cli@17
+*/
 angular packages:
 Angular Language Service
