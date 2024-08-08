@@ -1,0 +1,24 @@
+<form #registerMorm="ngForm" (ngSubmit)="register()" autocomplete="off">
+    <h2 class="text-center text-primary">Sign Up</h2>
+    <hr>
+    <div class="mb-3 form-floating">
+        <input type="text" type="text" 
+            name="username" 
+            [(ngModel)]="model.username" 
+            placeholder="user name"
+            class="form-control">
+        <label>Username</label>
+    </div>  
+    <div class="mb-3 form-floating">
+        <input type="password" type="text" 
+            name="password" 
+            [(ngModel)]="model.password" 
+            placeholder="password"
+            class="form-control">
+        <label>Password</label>
+    </div>
+    <div class="form-group text-center">
+        <button class="btn btn-success me-2" type="submit">Register</button>
+        <button class="btn btn-default me-2" type="button" (click)="cancel()">Cancel</button>
+    </div>
+</form>
