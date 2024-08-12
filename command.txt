@@ -44,6 +44,7 @@ nuget:
 Microsoft.EntityFrameworkCore.Sqlite
 Microsoft.EntityFrameworkCore.Design
 System.Identitymodel.Tokens.Jwt
+Microsoft.AspNetCore.Authentication.JwtBearer
 
 /////////////////////////////////////////////// Git  ////////////////////////////////////
 git init  
@@ -61,6 +62,16 @@ git remote add origin https://github.com/Elbaum-B/DatingApp8.git
 cmd:
 ng new CLIENT
 npm install ngx-bootstrap@12 bootstrap font-awesome
-
+npm install ngx-toastr --save
+npm i bootswatch
 angular packages:
 Angular Language Service // Settings => settings => search brackets 
+
+
+
+
+resource:
+https://www.npmjs.com/
+https://valor-software.com/ngx-bootstrap/#/components
+https://jwt.io/
+https://bootswatch.com/
