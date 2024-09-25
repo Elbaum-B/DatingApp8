@@ -1,4 +1,5 @@
-﻿using API.Data;
+﻿using System.Security.Claims;
+using API.Data;
 using API.DTOs;
 using API.Entities;
 using API.Interfaces;
@@ -40,5 +41,18 @@ public class UsersController(IUserRepository userRepository) : BaseApiController
     {
         var users = await userRepository.GetMembersAsync();
         return Ok(users);
+    }
+
+    [HttpPut]
+    public async Task<ActionResult> UpdateUser(MemberUpdateDto memberemberUpdateDto, IMapper mapper){
+            var username = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+            if(username == null) return BadRequest("No username found in token");
+
+            var user = await userRepository.GetUserByUserNameAsync(username);
+            if(user == null) return BadRequest("Could not fond user");
+            mapper.Map(memberemberUpdateDto, user);
+            if(await userRepository.SaveAllAsync()) return NoContent();
+
+            return BadRequest("Failed to update the user") ;
     }
 }

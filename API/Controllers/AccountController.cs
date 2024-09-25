@@ -34,7 +34,7 @@ public class AccountController(DataContext context, ITokenService tokenService) 
 
     private async Task<bool> UserExists(string username){
         return await context.Users.AnyAsync(x =>x.UserName.ToLower() == username.ToLower());
-    }
+    }   
     [HttpPost("login")] 
     public async Task<ActionResult<UserDto>> Login(LoginDto loginDto){
         var user = await context.Users.FirstOrDefaultAsync(x => x.UserName == loginDto.Username.ToLower());

@@ -32,9 +32,10 @@ dotnet ef database drop
 dotnet run
 dotnet watch
 
-code .
+code . 			//Visual Studio Code откроется и загрузит все файлы и папки из текущего каталога. 
 
 dotnet packages:
+.Net Install Tool
 C# Dev Kit
 Material Icon Theme
 NuGet Gallery
@@ -44,7 +45,7 @@ C# Extensions (C# IDE Extentions for VSCode)
 
 nuget:
 Microsoft.EntityFrameworkCore.Sqlite
-Microsoft.EntityFrameworkCore.Design
+Microsoft.EntityFrameworkCore.Design //for migrations
 System.Identitymodel.Tokens.Jwt
 Microsoft.AspNetCore.Authentication.JwtBearer
 
@@ -78,3 +79,4 @@ https://valor-software.com/ngx-bootstrap/#/components
 https://jwt.io/
 https://bootswatch.com/
 https://json-generator.com/
+https://dbeaver.io/
